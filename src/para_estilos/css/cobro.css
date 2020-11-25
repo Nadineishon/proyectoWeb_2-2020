@@ -1,0 +1,112 @@
+body{
+	background: pink;
+}
+/*Header*/
+.user{
+	margin-top: 0%;
+}
+.navbar{
+	margin-bottom: 0;
+}
+.jumbotron-nbs{
+	background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.671), hsla(317, 45%, 52%, 0.616)), url(../imagenes/taniasprin.jpg);
+	background: linear-gradient(to right, hsla(340, 95%, 50%, 0.671), hsla(317, 45%, 52%, 0.616)), url(../imagenes/taniasprin.jpg);
+	color: #fff;
+	padding: 30px 0 30px 0;
+	margin-bottom: 0px;
+	height: 240px;
+}
+.jubotron-nbs .wave{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+.form-contenedor-cobro{
+    background: #fff;
+    margin-top: 150px;
+    padding: 3px;
+}
+h2{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background:  #dd099d;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: rgb(173, 1, 107);
+}
+.button_buscar{
+    border: none;
+    width: 10%;
+    color: white;
+    font-size: 15px;
+    background:  #dd099d;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+      color: #1a2537;
+    font-weight: 600;
+}
+.link:hover{
+     color: cadetblue;
+}
+footer{
+	background: #17202A;
+	color: #fff;
+	text-align: center;
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 420px;
+        margin-top: 50px;
+        border-radius: 2%;
+        border: 0px solid #fff;
+        padding: 20px 30px;
+        -webkit-box-shadow: 1px 7px 21px 8px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 7px 21px 8px rgba(0,0,0,0.75);
+        box-shadow: 1px 7px 21px 8px rgba(0,0,0,0.75);
+    }
+}
+
+

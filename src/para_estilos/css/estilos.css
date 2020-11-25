@@ -1,0 +1,59 @@
+body{
+	background: pink;
+}
+/*Header*/
+.navbar{
+	margin-bottom: 0;
+}
+.jumbotron-nbs{
+	background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.671), hsla(317, 45%, 52%, 0.616)), url(../imagenes/taniasprin.jpg);
+	background: linear-gradient(to right, hsla(340, 95%, 50%, 0.671), hsla(317, 45%, 52%, 0.616)), url(../imagenes/taniasprin.jpg);
+	color: #fff;
+	padding: 30px 0 30px 0;
+	margin-bottom: 0px;
+	height: 240px;
+}
+.jubotron-nbs .wave{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+/*--Publicación--*/
+.main{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.post{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #999;
+}
+.post .post-title a{
+	color: #333;
+}
+.post .thumb{
+	margin-right: 10px;
+	width: 40%;
+}
+.post .thumb img{
+	width: 100%;
+}
+.post .contenedor-botones{
+	width: 100%;
+}
+/*Pie de página*/
+footer{
+	background: #17202A;
+	color: #fff;
+	text-align: center;
+}
+
+/*--Media querie--*/
+@media screen and (max-width: 768px){
+	.post .thumb{
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0px;
+	}
+
+}
