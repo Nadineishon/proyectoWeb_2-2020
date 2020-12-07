@@ -19,19 +19,18 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="#" class="navbar-brand">Arte y Decoración de Uñas Tania's</a>
+						<a href="/" class="navbar-brand">Arte y Decoración de Uñas Tania's</a>
 					</div>
 					<!--Inicia Menú-->
 					<div class="collapse navbar-collapse" id="navegacion-nbs">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="/">Inicio</a></li>
+							<li class="active"><a href="index_publico">Inicio</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Servicios<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Uñas</a></li>
-									<li><a href="#">Maquillaje</a></li>
-									<li><a href="#">Peinados</a></li>
-									<li><a href="#">Depilación</a></li>
+									<% datos.forEach(function(dato) { %>
+										<li><a href="#"><%=dato.nombre_servicio%></a></li>
+									<%});%>									
 								</ul>
 							</li>
 							<li><a href="#">Blog</a></li>
@@ -238,7 +237,7 @@
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<br><span>Síguenos</span><br>
 			<a  href="https://www.facebook.com/taniasmanicuristas" target="_blank">
-				<img  src="imagenes/iconos/fcb.png" class="img-circle" class="img-responsive" class="img-thumbnail" width="2.5%">
+				<img  src="imagenes/iconos/fcb.png" class="img-circle" class="img-responsive" class="img-thumbnail">
 			</a>
 			<h4>&copy Nadina Blanco Savtchenkova - NBS</h4>
 		</nav>

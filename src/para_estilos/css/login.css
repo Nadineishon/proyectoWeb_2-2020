@@ -64,15 +64,19 @@ body{
 }
 input[type="text"],
 input[type="password"]{
-    font-size: 19px;
+    max-width: 80%;
+    font-size: 15px;
     width: 82%;
     padding: 10px;
     border: none;
 }
+
 .input-contenedor{
-    margin-bottom: 20px;
-    padding-top: 10px;
-    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;    
+    height: 47px;
     border: 1px solid #aaa;
 }
 .form-control{

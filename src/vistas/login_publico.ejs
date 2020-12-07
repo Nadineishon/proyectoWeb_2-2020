@@ -8,6 +8,11 @@
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 		<link rel="shortcut icon" href="imagenes/logotanias.jpg" type="image/x-icon">
 		<title>Ingresar</title>
+		<script>
+			function gerente(){
+				document.location.href = "/principal_gerente";
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -20,12 +25,12 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="#" class="navbar-brand">Arte y Decoración de Uñas Tania's</a>
+						<a href="/" class="navbar-brand">Arte y Decoración de Uñas Tania's</a>
 					</div>
 					<!--Inicia Menú-->
 					<div class="collapse navbar-collapse" id="navegacion-nbs">
 						<ul class="nav navbar-nav">
-							<li><a href="/">Inicio</a></li>
+							<li><a href="index_publico">Inicio</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Servicios<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
@@ -79,20 +84,21 @@
 				<div class="col-md-4 col-sm-4 col-xs-12"></div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
 			   <!--<form class="user" action="/login_publico" method="POST">-->
-				<form class="user">
+				<form class="user" action="#" method="POST">
                         <h2 class="titulos"><b>¿Eres parte del personal?</b></h2>
                         <h2 class="titulos"><b>INGRESA AQUÍ:</b></h2>
                         <div class="contenedor">
                             <div class="input-contenedor">
-                            	<i class="fas fa-user icon"></i>
-                            	<input type="text" class="form-control" placeholder="Nombre de usuario" name="username"/>
+								<i class="fas fa-user icon"></i>
+								<input type="text" placeholder="Nombre de usuario" name="username" id="username"/>
+								
                             </div>
                             
                             <div class="input-contenedor">
                             	<i class="fas fa-key icon"></i>
-                            	<input type="password" class="form-control" placeholder="Contraseña" name="password"/>
+                            	<input type="password" placeholder="Contraseña" name="password"/>
                             </div>
-                            <button type="submit" value="Login" class="button">Ingresar </button>
+                            <button type="button" onclick="gerente();" value="Login" class="button">Ingresar</button>
                         </div>
                     </form>
 					<br><br><br>
@@ -109,7 +115,7 @@
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<br><span>Síguenos</span><br>
 			<a  href="https://www.facebook.com/taniasmanicuristas" target="_blank">
-				<img  src="imagenes/iconos/fcb.png" class="img-circle" class="img-responsive" class="img-thumbnail" width="2.5%">
+				<img  src="imagenes/iconos/fcb.png" class="img-circle" class="img-responsive" class="img-thumbnail">
 			</a>
 			<h4>&copy Nadina Blanco Savtchenkova - NBS</h4>
 		</nav>

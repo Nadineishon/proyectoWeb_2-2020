@@ -19,14 +19,14 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="#" class="navbar-brand">Arte y Decoración de Uñas Tania's</a>
+						<a href="/" class="navbar-brand">Arte y Decoración de Uñas Tania's</a>
 					</div>
 					<!--Inicia Menú-->
 					<div class="collapse navbar-collapse" id="navegacion-nbs">
 						<ul class="nav navbar-nav">
 							<li><a href="principal_cajera">Inicio</a></li>
 							<li class="active"><a href="cobrar_cajera">Cobrar</a></li>
-							<li><a href="/">Salir</a></li>
+							<li><a href="index_publico">Salir</a></li>
 						</ul>
 						<form class="navbar-form navbar-right" role="search">
 							<div class="form-group">
@@ -70,30 +70,36 @@
 				<div class="col-md-6 col-sm-2 col-xs-12">
 					<form class="form-contenedor-cobro">
 						<div class="form-group">
-                            <h3><b>Cobrar un servicio</b></h3>
-							<label for="usuario">Buscar cliente:</label>
-							<div class="row">
-								<form class="navbar-form navbar-right" role="search">
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Buscar...">
-									</div>
-									<button type="submit" class="btn btn-primary">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>
-								</form>
-								<div class="col">
-									<button type="submit" class="button">Cliente nuevo</button>
-								</div>
-							</div>
-								<br><br>
-                            <div class="form-group">
+							<h3><b>Cobrar un servicio</b></h3>	
+						</div>
+						<div class="form-group">
+							<label for="cliente">Buscar cliente:</label>
+							<select class="form-control" id="cliente" name="cliente" required>
+								<option value="">Seleccione una Opcion</option>
+								<% datos_cliente.forEach(function(cliente){%>
+									<option value="<%=cliente.idcliente%>"><%=cliente.nombre%> <%=cliente.apellido%></option>
+								<%})%>
+							</select>
+							<button type="button" class="button" data-toggle="modal" data-target="#myModal">Cliente nuevo</button>
+						</div>
+						<div class="form-group">
                             <label for="usuario">Servicio/s:</label>
-						    <select>
-                                <option>Colocado de uñas acrícilcas</option>
-                                <option>Pintado de uñas</option>
-                                <option>Depilación</option>
+						    <select id="servicio" name="servicio" class="form-control" required>
+                                <option value="">Seleccione una Opcion</option>
+								<% datos_servicios.forEach(function(servicio){%>
+									<option value="<%=servicio.nombre_servicio%>"><%=servicio.nombre_servicio%></option>
+								<%})%>								
                             </select>
-                            </div><br>
+						</div>
+						<div class="form-group">
+                            <label for="usuario">Descripcion Servicio:</label>
+						    <select id="descripcion" name="descripcion" class="form-control" required>
+                                <option value="">Seleccione una Opcion</option>								
+                            </select>
+						</div>
+						<div class="form-group">
+                            <br><br>
+                            <br>
 						    <div class="form-group">
 						        <label for="contraseña">Operaria:</label>
 						        <select>
@@ -109,7 +115,39 @@
 					  <br><br>
                 </div>
             </div>
-        </div>
+		</div>
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header" style="padding:35px 50px;">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4><span class="glyphicon glyphicon-user"></span> Registrar Cliente</h4>
+				</div>
+				<div class="modal-body" style="padding:40px 50px;">
+				  <form action="cliente" method="POST" role="form">
+					<div class="form-group">
+					  <label for="nombre"><span class="glyphicon glyphicon-pencil"></span>Nombre</label>
+					  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Cliente" required>
+					</div>
+					<div class="form-group">
+					  <label for="apellido"><span class="glyphicon glyphicon-pencil"></span>Apellido</label>
+					  <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
+					</div>
+					<div class="form-group">
+						<label for="celular"><span class="glyphicon glyphicon-phone"></span>Celular</label>
+						<input type="number" class="form-control" id="celular" name="celular" placeholder="Celular" min="6000000" max="9999999" required>
+					</div>					
+					  <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Aceptar</button>
+				  </form>
+				</div>
+				<div class="modal-footer">				 		  
+				</div>
+			  </div>
+			  
+			</div>
+		  </div> 		
 
 
 
@@ -121,7 +159,7 @@
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<br><span>Síguenos</span><br>
 			<a  href="https://www.facebook.com/taniasmanicuristas" target="_blank">
-				<img  src="imagenes/iconos/fcb.png" class="img-circle" class="img-responsive" class="img-thumbnail" width="2.5%">
+				<img  src="imagenes/iconos/fcb.png" class="img-circle" class="img-responsive" class="img-thumbnail">
 			</a>
 			<h4>&copy Nadina Blanco Savtchenkova - NBS</h4>
 		</nav>
